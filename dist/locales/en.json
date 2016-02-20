@@ -2534,7 +2534,7 @@
                 "terms": ""
             },
             "highway/primary": {
-                "name": "Primary Road",
+                "name": "Primary Arterial Road",
                 "terms": ""
             },
             "highway/primary_link": {
@@ -2546,7 +2546,7 @@
                 "terms": "auto*,race*,nascar"
             },
             "highway/residential": {
-                "name": "Residential Road",
+                "name": "Residential Street",
                 "terms": ""
             },
             "highway/rest_area": {
@@ -2558,7 +2558,7 @@
                 "terms": ""
             },
             "highway/secondary": {
-                "name": "Secondary Road",
+                "name": "Secondary Arterial Road",
                 "terms": ""
             },
             "highway/secondary_link": {
@@ -2606,7 +2606,7 @@
                 "terms": "streetlight,street light,lamp,light,gaslight"
             },
             "highway/tertiary": {
-                "name": "Tertiary Road",
+                "name": "Tertiary Arterial Road",
                 "terms": ""
             },
             "highway/tertiary_link": {
@@ -2634,8 +2634,8 @@
                 "terms": "cul-de-sac"
             },
             "highway/unclassified": {
-                "name": "Minor Road",
-                "terms": ""
+                "name": "Minor Arterial Road",
+                "terms": "unclassified,county"
             },
             "historic": {
                 "name": "Historic Site",

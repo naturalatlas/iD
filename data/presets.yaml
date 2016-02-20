@@ -2194,8 +2194,8 @@ en:
         terms: "<translate with synonyms or related terms for 'Pedestrian Street', separated by commas>"
       highway/primary:
         # highway=primary
-        name: Primary Road
-        terms: "<translate with synonyms or related terms for 'Primary Road', separated by commas>"
+        name: Primary Arterial Road
+        terms: "<translate with synonyms or related terms for 'Primary Arterial Road', separated by commas>"
       highway/primary_link:
         # highway=primary_link
         name: Primary Link
@@ -2208,8 +2208,8 @@ en:
         terms: "<translate with synonyms or related terms for 'Motor Raceway', separated by commas>"
       highway/residential:
         # highway=residential
-        name: Residential Road
-        terms: "<translate with synonyms or related terms for 'Residential Road', separated by commas>"
+        name: Residential Street
+        terms: "<translate with synonyms or related terms for 'Residential Street', separated by commas>"
       highway/rest_area:
         # highway=rest_area
         name: Rest Area
@@ -2221,8 +2221,8 @@ en:
         terms: "<translate with synonyms or related terms for 'Unknown Road', separated by commas>"
       highway/secondary:
         # highway=secondary
-        name: Secondary Road
-        terms: "<translate with synonyms or related terms for 'Secondary Road', separated by commas>"
+        name: Secondary Arterial Road
+        terms: "<translate with synonyms or related terms for 'Secondary Arterial Road', separated by commas>"
       highway/secondary_link:
         # highway=secondary_link
         name: Secondary Link
@@ -2274,8 +2274,8 @@ en:
         terms: "<translate with synonyms or related terms for 'Street Lamp', separated by commas>"
       highway/tertiary:
         # highway=tertiary
-        name: Tertiary Road
-        terms: "<translate with synonyms or related terms for 'Tertiary Road', separated by commas>"
+        name: Tertiary Arterial Road
+        terms: "<translate with synonyms or related terms for 'Tertiary Arterial Road', separated by commas>"
       highway/tertiary_link:
         # highway=tertiary_link
         name: Tertiary Link
@@ -2307,8 +2307,9 @@ en:
         terms: "<translate with synonyms or related terms for 'Turning Circle', separated by commas>"
       highway/unclassified:
         # highway=unclassified
-        name: Minor Road
-        terms: "<translate with synonyms or related terms for 'Minor Road', separated by commas>"
+        name: Minor Arterial Road
+        # 'terms: unclassified,county'
+        terms: "<translate with synonyms or related terms for 'Minor Arterial Road', separated by commas>"
       historic:
         # 'historic=*'
         name: Historic Site

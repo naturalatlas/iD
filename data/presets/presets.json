@@ -4471,7 +4471,7 @@
             "highway": "primary"
         },
         "terms": [],
-        "name": "Primary Road"
+        "name": "Primary Arterial Road"
     },
     "highway/primary_link": {
         "icon": "highway-primary-link",
@@ -4539,7 +4539,7 @@
             "highway": "residential"
         },
         "terms": [],
-        "name": "Residential Road"
+        "name": "Residential Street"
     },
     "highway/rest_area": {
         "geometry": [
@@ -4592,7 +4592,7 @@
             "highway": "secondary"
         },
         "terms": [],
-        "name": "Secondary Road"
+        "name": "Secondary Arterial Road"
     },
     "highway/secondary_link": {
         "icon": "highway-secondary-link",
@@ -4807,7 +4807,7 @@
             "highway": "tertiary"
         },
         "terms": [],
-        "name": "Tertiary Road"
+        "name": "Tertiary Arterial Road"
     },
     "highway/tertiary_link": {
         "icon": "highway-tertiary-link",
@@ -4966,8 +4966,11 @@
         "tags": {
             "highway": "unclassified"
         },
-        "terms": [],
-        "name": "Minor Road"
+        "terms": [
+            "unclassified",
+            "county"
+        ],
+        "name": "Minor Arterial Road"
     },
     "historic": {
         "fields": [
