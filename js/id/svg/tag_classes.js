@@ -10,7 +10,7 @@ iD.svg.TagClasses = function() {
         ],
         secondaries = [
             'oneway', 'bridge', 'tunnel', 'embankment', 'cutting', 'barrier',
-            'surface', 'tracktype', 'crossing'
+            'surface', 'tracktype', 'crossing', 'motor_vehicle', 'motorcar'
         ],
         tagClassRe = /^tag-/,
         tags = function(entity) { return entity.tags; };
@@ -76,8 +76,12 @@ iD.svg.TagClasses = function() {
             for (i = 0; i < secondaries.length; i++) {
                 k = secondaries[i];
                 v = t[k];
-                if (!v || v === 'no') continue;
-                classes += ' tag-' + k + ' tag-' + k + '-' + v;
+                if (!v) continue;
+                if (v === 'no') {
+                    classes += ' tag-' + k + '-no';
+                } else {
+                    classes += ' tag-' + k + ' tag-' + k + '-' + v;
+                }
             }
 
             // For highways, look for surface tagging..

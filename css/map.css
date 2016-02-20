@@ -1651,3 +1651,13 @@ text.gpx {
     stroke-width: 60px;
     pointer-events: visibleStroke;
 }
+
+/* Natural Atlas Styles (Optimized for Forest Roads) */
+path.stroke.tag-motorcar-no,
+path.stroke.tag-motor_vehicle-no {
+	stroke: #f05c26;
+}
+path.casing.tag-motorcar-no,
+path.casing.tag-motor_vehicle-no {
+	stroke: #dd4b17;
+}
