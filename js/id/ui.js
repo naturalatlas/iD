@@ -180,10 +180,44 @@ iD.ui = function(context) {
             };
         }
 
+        function copyMouseEvent(type, e) {
+            return new MouseEvent(type, {
+                button: 0,    // left click
+                buttons: 1,   // left click
+                detail: 1,    // click count
+                bubbles: true,
+                cancelable: true,
+                view: e.view,
+                screenX: e.screenX,
+                screenY: e.screenY,
+                clientX: e.clientX,
+                clientY: e.clientY,
+                ctrlKey: e.ctrlKey,
+                shiftKey: e.shiftKey,
+                altKey: e.altKey,
+                metaKey: e.metaKey
+            });
+        }
+
+        // on space (keyCode 32), make a fake left click
+        function space() {
+            if (d3.event.keyCode !== 32) return;
+            d3.event.preventDefault();
+
+            var e = map.mouseEvent(),
+                target = d3.select(e.target).node();
+
+            if (!e || !target || context.inIntro()) return;
+            target.dispatchEvent(copyMouseEvent('mousedown', e));
+            target.dispatchEvent(copyMouseEvent('mouseup', e));
+            target.dispatchEvent(copyMouseEvent('click', e));
+        }
+
         // pan amount
         var pa = 10;
 
         var keybinding = d3.keybinding('main')
+            .on('space', space, true)
             .on('⌫', function() { d3.event.preventDefault(); })
             .on('←', pan([pa, 0]))
             .on('↑', pan([0, pa]))
@@ -200,6 +234,9 @@ iD.ui = function(context) {
 
         d3.select(document)
             .call(keybinding);
+
+        // map.surface
+        //     .on('keydown.main', space, true)
 
         context.enter(iD.modes.Browse(context));
 

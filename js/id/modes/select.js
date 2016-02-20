@@ -164,8 +164,7 @@ iD.modes.Select = function(context, selectedIDs) {
         operations.unshift(iD.operations.Delete(selectedIDs, context));
 
         keybinding
-            .on('⎋', esc, true)
-            .on('space', toggleMenu);
+            .on('⎋', esc, true);
 
         operations.forEach(function(operation) {
             operation.keys.forEach(function(key) {

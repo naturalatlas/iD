@@ -250,6 +250,10 @@ iD.Map = function(context) {
         return mouse(e);
     };
 
+    map.mouseEvent = function() {
+        return mousemove;
+    };
+
     map.mouseCoordinates = function() {
         return projection.invert(map.mouse());
     };
