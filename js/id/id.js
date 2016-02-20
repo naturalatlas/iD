@@ -115,7 +115,7 @@ window.iD = function () {
         });
     };
 
-    var minEditableZoom = 16;
+    var minEditableZoom = 14.5;
     context.minEditableZoom = function(_) {
         if (!arguments.length) return minEditableZoom;
         minEditableZoom = _;
