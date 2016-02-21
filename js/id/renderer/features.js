@@ -1,4 +1,11 @@
 iD.Features = function(context) {
+	var default_disabled_features = {
+		'landuse': true,
+		'boundaries': true,
+		'water': true,
+		'rail': true
+	};
+
     var major_roads = {
         'motorway': true,
         'motorway_link': true,
@@ -60,7 +67,7 @@ iD.Features = function(context) {
         _keys.push(k);
         _features[k] = {
             filter: filter,
-            enabled: true,   // whether the user wants it enabled..
+            enabled: true, // whether the user wants it enabled..
             count: 0,
             currentMax: (max || Infinity),
             defaultMax: (max || Infinity),
@@ -69,6 +76,9 @@ iD.Features = function(context) {
             hidden: function() { return !context.editable() || this.count > this.currentMax * _cullFactor; },
             autoHidden: function() { return this.hidden() && this.currentMax > 0; }
         };
+        if (default_disabled_features[k]) {
+        	_features[k].disable();
+        }
     }
 
 
